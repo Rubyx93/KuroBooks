@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Iniciar sesión</h1>
+
+    <form onsubmit="login(event)">
+        <input type="text" id="usuario" placeholder="Usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit">Entrar</button>
+    </form>
+
+    <script>
+        function login(e) {
+            e.preventDefault();
+
+            const user = document.getElementById("usuario").value;
+            const pass = document.getElementById("password").value;
+
+            const userSaved = localStorage.getItem("usuario");
+            const passSaved = localStorage.getItem("password");
+
+            if (user === userSaved && pass === passSaved) {
+                localStorage.setItem("logeado", "true");
+                window.location.href = "index.html";
+            } else {
+                alert("Usuario o contraseña incorrectos");
+            }
+        }
+    </script>
+</body>
+</html>
