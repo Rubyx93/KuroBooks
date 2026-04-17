@@ -262,3 +262,24 @@ img {
 .dark-mode a:hover {
     background: #ff7fcf;
 }
+.subir-imagen {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.subir-imagen input {
+    margin-right: 10px;
+}
+
+.galeria img {
+    width: 250px;
+    border-radius: 20px;
+    border: 3px solid #ffd6ea;
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
+    transition: 0.3s;
+}
+
+.galeria img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 25px rgba(255, 153, 204, 0.6);
+}
