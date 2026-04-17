@@ -6,23 +6,45 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header>
-        <h1>Mis Libros</h1>
-        <p>Bienvenido a mi biblioteca online</p>
-    </header>
 
-    <section class="libros">
-        <article class="libro">
-            <h2>Nombre del libro</h2>
-            <p>Descripción breve del libro.</p>
-            <a href="libro1.html">Leer</a>
-        </article>
-    </section>
-    <script>
+<!-- BLOQUEO: si no está logeado, lo manda al login -->
+<script>
     if (localStorage.getItem("logeado") !== "true") {
-        alert("Debes iniciar sesión para ver los libros");
         window.location.href = "login.html";
     }
 </script>
+
+<header>
+    <h1>Mis Libros</h1>
+
+    <button onclick="logout()" style="float:right; margin-top:-40px;">
+        Cerrar sesión
+    </button>
+</header>
+
+<section class="libros">
+    <article class="libro">
+        <h2>Mi Primer Libro</h2>
+        <p>Descripción breve del libro.</p>
+        <a href="libro1.html">Leer</a>
+    </article>
+
+    <!-- Puedes copiar este bloque para más libros -->
+    <!--
+    <article class="libro">
+        <h2>Otro Libro</h2>
+        <p>Descripción breve.</p>
+        <a href="libro2.html">Leer</a>
+    </article>
+    -->
+</section>
+
+<script>
+    function logout() {
+        localStorage.setItem("logeado", "false");
+        window.location.href = "login.html";
+    }
+</script>
+
 </body>
 </html>
