@@ -334,3 +334,54 @@ img {
     color: #b46cff;
     font-weight: bold;
 }
+.login-contenedor {
+    max-width: 350px;
+    margin: 80px auto;
+    background: rgba(255, 240, 250, 0.8);
+    padding: 25px;
+    border-radius: 20px;
+    border: 3px solid #ffb3e6;
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.5);
+    text-align: center;
+}
+
+.login-contenedor h1 {
+    color: #ff7fcf;
+    text-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
+}
+
+.subtitulo {
+    color: #c77fd6;
+    margin-bottom: 20px;
+}
+
+.login-contenedor input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 2px solid #ffb3e6;
+}
+
+.login-contenedor button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #ffb3e6, #ff99cc);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(255, 153, 204, 0.4);
+    transition: 0.3s;
+}
+
+.login-contenedor button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #ff99d6, #ff7fcf);
+}
+
+.registro-link a {
+    color: #ff7fcf;
+    font-weight: bold;
+}
