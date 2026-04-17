@@ -1,5 +1,5 @@
-/* FUENTE KAWAII */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Fredoka:wght@400;500;600&display=swap');
+/* FUENTES KAWAII */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;600&display=swap');
 
 /* FONDO ANIMADO PASTEL */
 body {
@@ -10,6 +10,8 @@ body {
     margin: 0;
     padding: 20px;
     color: #555;
+    position: relative;
+    overflow-x: hidden;
 }
 
 @keyframes pastelFlow {
@@ -20,12 +22,46 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* TÍTULOS */
-h1, h2 {
+/* ESTRELLITAS ANIMADAS */
+body::before {
+    content: "✨ ✨ ✨ ✨ ✨";
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 40px;
+    width: 100%;
+    animation: estrellas 12s linear infinite;
+    opacity: 0.4;
+}
+
+@keyframes estrellas {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-200vh); }
+}
+
+/* HEADER KAWAII CON BANNER */
+header {
+    background: rgba(255, 255, 255, 0.7);
+    border: 3px solid #ffd6ea;
+    border-radius: 25px;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
+    backdrop-filter: blur(6px);
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 32px;
     color: #ff7fcf;
     text-shadow: 0 0 10px rgba(255, 182, 193, 0.7);
-    letter-spacing: 1px;
+}
+
+header::before {
+    content: "🌸 ✨ 🌙 ✨ 🌸";
+    display: block;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
 /* TARJETAS DE LIBROS */
@@ -43,6 +79,7 @@ h1, h2 {
     box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
     backdrop-filter: blur(6px);
     transition: 0.3s;
+    position: relative;
 }
 
 .libro:hover {
@@ -50,11 +87,11 @@ h1, h2 {
     box-shadow: 0 15px 25px rgba(255, 182, 193, 0.6);
 }
 
-.libro h2 {
-    color: #ff99d6;
+.libro h2::before {
+    content: "💖 ";
 }
 
-/* BOTONES KAWAII */
+/* BOTONES KAWAII CON CARITAS */
 button, a {
     display: inline-block;
     background: linear-gradient(135deg, #ffb3e6, #ff99cc);
@@ -67,12 +104,17 @@ button, a {
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 5px 10px rgba(255, 153, 204, 0.4);
+    font-size: 16px;
 }
 
 button:hover, a:hover {
     background: linear-gradient(135deg, #ff99d6, #ff7fcf);
     transform: scale(1.08);
     box-shadow: 0 8px 15px rgba(255, 153, 204, 0.6);
+}
+
+button::before, a::before {
+    content: " (｡♥‿♥｡) ";
 }
 
 /* FORMULARIOS ADORABLES */
@@ -114,8 +156,31 @@ input:focus {
     backdrop-filter: blur(6px);
 }
 
-/* ENLACES DE VOLVER */
-a {
-    margin-top: 20px;
-    display: inline-block;
+/* MODO OSCURO KAWAII */
+.dark-mode {
+    background: #2b244d !important;
+    color: #ffe6ff !important;
+}
+
+.dark-mode header {
+    background: rgba(60, 50, 100, 0.7);
+    border-color: #c7b7ff;
+}
+
+.dark-mode .libro,
+.dark-mode .contenido,
+.dark-mode form {
+    background: rgba(60, 50, 100, 0.6);
+    border-color: #c7b7ff;
+    color: #ffe6ff;
+}
+
+.dark-mode button,
+.dark-mode a {
+    background: #ff9ad6;
+}
+
+.dark-mode button:hover,
+.dark-mode a:hover {
+    background: #ff7fcf;
 }
