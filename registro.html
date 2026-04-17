@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Crear cuenta</h1>
+
+    <form onsubmit="registrar(event)">
+        <input type="text" id="usuario" placeholder="Nombre de usuario" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit">Registrarse</button>
+    </form>
+
+    <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+
+    <script>
+        function registrar(e) {
+            e.preventDefault();
+            const user = document.getElementById("usuario").value;
+            const pass = document.getElementById("password").value;
+
+            localStorage.setItem("usuario", user);
+            localStorage.setItem("password", pass);
+
+            alert("Registro completado");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
