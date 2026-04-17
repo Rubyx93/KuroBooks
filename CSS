@@ -184,3 +184,13 @@ input:focus {
 .dark-mode a:hover {
     background: #ff7fcf;
 }
+img {
+    animation: brilloKawaii 3s ease-in-out infinite;
+}
+
+@keyframes brilloKawaii {
+    0% { filter: drop-shadow(0 0 5px #ffb3d9); }
+    50% { filter: drop-shadow(0 0 15px #ff99cc); }
+    100% { filter: drop-shadow(0 0 5px #ffb3d9); }
+}
+
