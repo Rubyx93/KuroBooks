@@ -2,56 +2,37 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Iniciar sesión</title>
+    <title>Iniciar Sesión ✨</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <h1>Iniciar sesión</h1>
 
-    <form onsubmit="login(event)">
-        <input type="text" id="usuario" placeholder="Usuario" required>
-        <input type="password" id="password" placeholder="Contraseña" required>
-        <button type="submit">Entrar</button>
+<div class="login-contenedor">
+    <h1>💖 Iniciar Sesión 💖</h1>
+    <p class="subtitulo">Bienvenido de nuevo a KuroBooks</p>
+
+    <form onsubmit="return login()">
+        <label>Usuario</label>
+        <input type="text" id="usuario" required>
+
+        <label>Contraseña</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">✨ Entrar ✨</button>
     </form>
 
-    <script>
-        function login(e) {
-            e.preventDefault();
+    <p class="registro-link">
+        ¿No tienes cuenta?  
+        <a href="index.html">Regístrate aquí 💜</a>
+    </p>
+</div>
 
-            const user = document.getElementById("usuario").value;
-            const pass = document.getElementById("password").value;
+<script>
+function login() {
+    const user = document.getElementById("usuario").value;
+    const pass = document.getElementById("password").value;
 
-            const userSaved = localStorage.getItem("usuario");
-            const passSaved = localStorage.getItem("password");
-
-            if (user === userSaved && pass === passSaved) {
-                localStorage.setItem("logeado", "true");
-                window.location.href = "index.html";
-            } else {
-                alert("Usuario o contraseña incorrectos");
-            }
-        }
-    </script>
-    <script>
-function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle("dark-mode");
-
-    // Guardar estado
-    if (body.classList.contains("dark-mode")) {
-        localStorage.setItem("modoOscuro", "true");
-    } else {
-        localStorage.setItem("modoOscuro", "false");
-    }
-}
-
-// Activar automáticamente si estaba guardado
-window.onload = function() {
-    if (localStorage.getItem("modoOscuro") === "true") {
-        document.body.classList.add("dark-mode");
-    }
-};
-</script>
+    const
 
 </body>
 </html>
