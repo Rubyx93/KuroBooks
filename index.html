@@ -2,38 +2,50 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mis Libros</title>
+    <title>KuroBooks ✨</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
 
-<!-- BLOQUEO: si no está logeado, lo manda al login -->
+<!-- BLOQUEO: si no está logeado, redirige al login -->
 <script>
     if (localStorage.getItem("logeado") !== "true") {
         window.location.href = "login.html";
     }
 </script>
+
 <header>
-    <img src="logo-kurobooks.png" alt="Logo KuroBooks" style="width:250px; display:block; margin:auto;">
-    <h1>Mis Libros</h1>
+    <!-- LOGO KAWAII -->
+    <img src="logo-kurobooks.png" alt="Logo KuroBooks" style="width:280px; display:block; margin:auto; animation: brilloKawaii 3s ease-in-out infinite;">
+    <h1>💖 Bienvenido a KuroBooks 💖</h1>
+    <p>Tu biblioteca mágica pastel kawaii 🌙✨</p>
+
     <button onclick="logout()" style="float:right; margin-top:-40px;">Cerrar sesión</button>
 </header>
+
 <section class="libros">
     <article class="libro">
-        <h2>Mi Primer Libro</h2>
-        <p>Descripción breve del libro.</p>
+        <h2>🌸 Mi Primer Libro 🌸</h2>
+        <p>Una historia encantada escrita con amor y magia pastel.</p>
         <a href="libro1.html">Leer</a>
     </article>
 
-    <!-- Puedes copiar este bloque para más libros -->
-    <!--
     <article class="libro">
-        <h2>Otro Libro</h2>
-        <p>Descripción breve.</p>
+        <h2>☁️ Sueños de Lavanda ☁️</h2>
+        <p>Relatos suaves y dulces como las nubes del amanecer.</p>
         <a href="libro2.html">Leer</a>
     </article>
-    -->
+
+    <article class="libro">
+        <h2>✨ Corazones y Estrellas ✨</h2>
+        <p>Un viaje por mundos de fantasía y ternura infinita.</p>
+        <a href="libro3.html">Leer</a>
+    </article>
 </section>
+
+<footer style="text-align:center; margin-top:40px;">
+    <p>🌈 Hecho con amor por Kuro 💖</p>
+</footer>
 
 <script>
     function logout() {
