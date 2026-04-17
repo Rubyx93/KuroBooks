@@ -18,6 +18,27 @@
     <footer>
         <a href="libro1.html">Volver al libro</a>
     </footer>
+    <script>
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle("dark-mode");
+
+    // Guardar estado
+    if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("modoOscuro", "true");
+    } else {
+        localStorage.setItem("modoOscuro", "false");
+    }
+}
+
+// Activar automáticamente si estaba guardado
+window.onload = function() {
+    if (localStorage.getItem("modoOscuro") === "true") {
+        document.body.classList.add("dark-mode");
+    }
+};
+</script>
+
 </body>
 </html>
 <button onclick="toggleDarkMode()">🌙 Modo oscuro</button>
