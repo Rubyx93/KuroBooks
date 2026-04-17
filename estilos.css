@@ -283,3 +283,54 @@ img {
     transform: scale(1.08);
     box-shadow: 0 15px 25px rgba(255, 153, 204, 0.6);
 }
+.registro-contenedor {
+    max-width: 350px;
+    margin: 80px auto;
+    background: rgba(255, 240, 250, 0.85);
+    padding: 25px;
+    border-radius: 20px;
+    border: 3px solid #d8a7ff;
+    box-shadow: 0 10px 25px rgba(200, 150, 255, 0.4);
+    text-align: center;
+}
+
+.registro-contenedor h1 {
+    color: #c77fd6;
+    text-shadow: 0 0 8px rgba(200, 150, 255, 0.5);
+}
+
+.subtitulo {
+    color: #a86bd6;
+    margin-bottom: 20px;
+}
+
+.registro-contenedor input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 2px solid #d8a7ff;
+}
+
+.registro-contenedor button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(135deg, #d8a7ff, #c77fd6);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(200, 150, 255, 0.4);
+    transition: 0.3s;
+}
+
+.registro-contenedor button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #c77fd6, #b46cff);
+}
+
+.login-link a {
+    color: #b46cff;
+    font-weight: bold;
+}
