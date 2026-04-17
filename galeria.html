@@ -52,6 +52,43 @@ function toggleDarkMode() {
 }
 </script>
 <button onclick="toggleDarkMode()">🌙 Modo oscuro</button>
+<script>
+function subirImagen() {
+    const input = document.getElementById("inputImagen");
+    const archivo = input.files[0];
+
+    if (!archivo) {
+        alert("Selecciona una imagen primero 💖");
+        return;
+    }
+
+    const lector = new FileReader();
+
+    lector.onload = function(e) {
+        let imagenes = JSON.parse(localStorage.getItem("galeria")) || [];
+        imagenes.push(e.target.result);
+        localStorage.setItem("galeria", JSON.stringify(imagenes));
+        mostrarImagenes();
+    };
+
+    lector.readAsDataURL(archivo);
+}
+
+function mostrarImagenes() {
+    const contenedor = document.querySelector(".galeria");
+    contenedor.innerHTML = "";
+
+    let imagenes = JSON.parse(localStorage.getItem("galeria")) || [];
+
+    imagenes.forEach(src => {
+        const img = document.createElement("img");
+        img.src = src;
+        contenedor.appendChild(img);
+    });
+}
+
+mostrarImagenes();
+</script>
 
 
 </body>
