@@ -1,36 +1,121 @@
+/* FUENTE KAWAII */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Fredoka:wght@400;500;600&display=swap');
+
+/* FONDO ANIMADO PASTEL */
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
+    font-family: 'Fredoka', 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #ffe6f2, #e6f0ff, #e8ffe6, #fff5e6);
+    background-size: 600% 600%;
+    animation: pastelFlow 18s ease infinite;
     margin: 0;
-    padding: 0;
+    padding: 20px;
+    color: #555;
 }
 
-header {
-    background: #6a4bc3;
-    color: white;
-    padding: 20px;
+@keyframes pastelFlow {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* TÍTULOS */
+h1, h2 {
     text-align: center;
+    color: #ff7fcf;
+    text-shadow: 0 0 10px rgba(255, 182, 193, 0.7);
+    letter-spacing: 1px;
 }
 
+/* TARJETAS DE LIBROS */
 .libros {
-    padding: 20px;
+    max-width: 750px;
+    margin: auto;
 }
 
 .libro {
-    background: white;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    border: 3px solid #ffd6ea;
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
 }
 
-.libro a {
-    display: inline-block;
-    margin-top: 10px;
-    background: #6a4bc3;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    text-decoration: none;
+.libro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(255, 182, 193, 0.6);
 }
-<link rel="stylesheet" href="estilos.css">
+
+.libro h2 {
+    color: #ff99d6;
+}
+
+/* BOTONES KAWAII */
+button, a {
+    display: inline-block;
+    background: linear-gradient(135deg, #ffb3e6, #ff99cc);
+    color: white;
+    padding: 12px 18px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 10px rgba(255, 153, 204, 0.4);
+}
+
+button:hover, a:hover {
+    background: linear-gradient(135deg, #ff99d6, #ff7fcf);
+    transform: scale(1.08);
+    box-shadow: 0 8px 15px rgba(255, 153, 204, 0.6);
+}
+
+/* FORMULARIOS ADORABLES */
+form {
+    max-width: 350px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.65);
+    padding: 25px;
+    border-radius: 20px;
+    border: 3px solid #ffd6ea;
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
+    backdrop-filter: blur(8px);
+}
+
+input {
+    padding: 12px;
+    border: 2px solid #ffcce6;
+    border-radius: 12px;
+    font-size: 16px;
+    background: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #ff99cc;
+    box-shadow: 0 0 10px #ffb3d9;
+}
+
+/* CONTENIDO DEL LIBRO */
+.contenido {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 25px;
+    border-radius: 20px;
+    border: 3px solid #ffd6ea;
+    box-shadow: 0 10px 20px rgba(255, 182, 193, 0.4);
+    max-width: 850px;
+    margin: auto;
+    backdrop-filter: blur(6px);
+}
+
+/* ENLACES DE VOLVER */
+a {
+    margin-top: 20px;
+    display: inline-block;
+}
