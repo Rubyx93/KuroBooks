@@ -385,3 +385,18 @@ img {
     color: #ff7fcf;
     font-weight: bold;
 }
+.registro-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.registro-link a {
+    color: #ff7fcf;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.registro-link a:hover {
+    text-shadow: 0 0 6px #ffb3e6;
+}
+
