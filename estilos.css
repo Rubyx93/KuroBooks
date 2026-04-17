@@ -235,3 +235,30 @@ img {
     transform: scale(1.08);
     background: linear-gradient(135deg, #ff99d6, #ff7fcf);
 }
+.dark-mode {
+    background: #2b244d !important;
+    color: #ffe6ff !important;
+}
+
+.dark-mode header {
+    background: rgba(60, 50, 100, 0.7);
+    border-color: #c7b7ff;
+}
+
+.dark-mode .libro,
+.dark-mode .contenido,
+.dark-mode form {
+    background: rgba(60, 50, 100, 0.6);
+    border-color: #c7b7ff;
+    color: #ffe6ff;
+}
+
+.dark-mode button,
+.dark-mode a {
+    background: #ff9ad6;
+}
+
+.dark-mode button:hover,
+.dark-mode a:hover {
+    background: #ff7fcf;
+}
