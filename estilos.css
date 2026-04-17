@@ -194,3 +194,44 @@ img {
     100% { filter: drop-shadow(0 0 5px #ffb3d9); }
 }
 
+/* BARRA DE ESTADO KAWAII */
+.barra-estado {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.75);
+    border-bottom: 3px solid #ffd6ea;
+    padding: 12px 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 5px 15px rgba(255, 182, 193, 0.4);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.estado-texto {
+    font-size: 18px;
+    color: #ff7fcf;
+    font-weight: bold;
+    text-shadow: 0 0 8px rgba(255, 182, 193, 0.6);
+}
+
+.estado-botones button {
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffb3e6, #ff99cc);
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(255, 153, 204, 0.4);
+    transition: 0.3s;
+}
+
+.estado-botones button:hover {
+    transform: scale(1.08);
+    background: linear-gradient(135deg, #ff99d6, #ff7fcf);
+}
