@@ -18,5 +18,11 @@
             <a href="libro1.html">Leer</a>
         </article>
     </section>
+    <script>
+    if (localStorage.getItem("logeado") !== "true") {
+        alert("Debes iniciar sesión para ver los libros");
+        window.location.href = "login.html";
+    }
+</script>
 </body>
 </html>
